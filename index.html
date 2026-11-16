@@ -3,27 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="style.css" />
     <title>Tatiane Silva | Portfólio</title>
   </head>
   <body>
     <header class="hero-nav">
       <div class="container-nav">
         <nav class="nav-bar js-menu">
-          <div class="logo-star">
-            <img src="imgs/star-logo-red.png" alt="Logo de estrela">
-          </div>
-          <div class="logo-nav">
-            <img src="" alt="" />
-          </div>
           <ul>
+            <div class="logo-star">
+              <img src="imgs/star-logo-preta.png" alt="Logo de estrela" />
+            </div>
             <li><a href="#home">Home</a></li>
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#contato">Contato</a></li>
             <li>
-              <button class="theme-toggle" aria-label="Alternar tema">
-                🌙
+              <button
+                class="theme-toggle js-theme-toggle"
+                aria-label="Alternar tema">
+                <img
+                  class="theme-icon"
+                  src="imgs/tema-claro-escuro.png"
+                  alt="Tema claro e escuro" />
               </button>
             </li>
           </ul>
@@ -40,29 +41,221 @@
             </span>
           </h1>
         </div>
-        <div class="hero-img">
-          <img src="" alt="" />
+        <div class="hero-img-container">
+          <img class="hero-img" src="imgs/foto-hero.png" alt="Foto do Hero" />
         </div>
       </section>
-      <section id="biografia" class="grid-section">
-        <div class="biografia-p">
-          <p></p>
+      <section class="section-sobre">
+        <div class="container-sobre">
+          <div class="sobre-p">
+            <h2 class="sobre-title">Prazer, me chamo Tatiane</h2>
+            <p class="sobre-text">
+              Produzo conteúdo para a internet desde 2023. A moda sempre teve um papel fundamental na minha história, e foi através dela que ganhei a oportunidade de iniciar uma carreira na área. Desde então, fui explorando novas possibilidades criativas, expandindo minha atuação para universos como beleza, maquiagem e lifestyle. Essa trajetória também me levou ao UGC, uma forma de criar conteúdos que unem criatividade, autenticidade e a conexão entre marcas e consumidores.
+
+Hoje, vejo cada projeto como uma oportunidade de contar histórias de maneira única, traduzindo a essência de cada marca em conteúdos que despertam interesse, geram identificação e aproximam pessoas.
+            </p>
+         </div>
+         <ul class="ul-list">
+          <li class="sobre-lista"><img src="imgs/vestido.png" alt="Moda">
+            <h3>Moda</h3>
+          </li>
+          <li class="sobre-lista"><img src="imgs/maquiagem.png" alt="Beleza">
+            <h3>Beleza</h3>
+          </li>
+          <li class="sobre-lista"><img src="imgs/video.png" alt="UGC">
+            <h3>UGC</h3>
+          </li>
+         </ul>
         </div>
-        <div class="biografia-title"></div>
       </section>
-      <section id="contato" class="grid-section">
-        <div class="contato-title">
-          <h1></h1>
+      
+      <section class="glass-section" id="parcerias">
+        <div class="glass-heading">
+          <span>PORTFÓLIO</span>
+          <h2>Marcas que contam histórias<span>.</span></h2>
+          <p>Campanhas, experiências e colaborações.</p>
         </div>
-        <div class="contato-p">
-          <p></p>
+
+        <div class="glass-stage">
+          <div class="glass-track">
+             <article class="glass-card">
+              <video src="videos/garnier.mp4"
+                muted loop playsinline preload="metadata"
+              ></video>
+              <div class="glass-card-content">
+                <div>
+                  <p class="glass-brand">Parceria com</p>
+                  <h3>Garnier</h3>
+                </div>
+              </div>
+            </article>
+           <article class="glass-card">
+            <img class="glass-cover" src="imgs/colorama-img.jpg" alt="Capa da campanha Colorama">
+              <video src="videos/colorama.mp4" 
+              muted loop playsinline preload="metadata" ></video>
+              <div class="glass-card-content">
+                <div>
+                  <p class="glass-brand">Parceria com </p>
+                  <h3>Colorama</h3>
+                </div>
+              </div>
+            </article>
+
+            <article class="glass-card">
+              <img class="glass-cover" src="imgs/elseve-img.jpg" alt="Capa da campanha Elseve">
+              <video src="videos/elseve.mp4" muted loop playsinline preload="metadata" ></video>
+              <div class="glass-card-content">
+                <div>
+                  <p class="glass-brand">Parceria com </p>
+                  <h3>Elseve</h3>
+                </div>
+              </div>
+            </article>
+
+            <article class="glass-card">
+              <img class="glass-cover" src="imgs/garnier-img.jpg" alt="Capa da campanha Garnier">
+              <video src="videos/garnier-serum.mp4" muted loop playsinline preload="metadata" ></video>
+              <div class="glass-card-content">
+                <div>
+                  <p class="glass-brand">Parceria com </p>
+                  <h3>Garnier</h3>
+                </div>
+              </div>
+            </article>
+
+            <article class="glass-card">
+              <img class="glass-cover" src="imgs/tim-img.jpg" alt="Capa da campanha TIM">
+              <video src="videos/tim.mp4"
+                muted loop playsinline preload="metadata"
+              ></video>
+              <div class="glass-card-content">
+                <div>
+                  <p class="glass-brand">Parceria com</p>
+                  <h3>TIM</h3>
+                </div>
+              </div>
+            </article>
+
+            <article class="glass-card">
+              <img class="glass-cover" src="imgs/eudora-img.jpg" alt="Capa da campanha Eudora">
+             <video src="videos/eudora.mp4"   muted loop playsinline preload="metadata" ></video>
+              <div class="glass-card-content">
+                <div>
+                  <p class="glass-brand">Parceria com</p>
+                  <h3>Eudora</h3>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
+
+        <div class="glass-controls">
+          <button
+            type="button"
+            class="glass-prev"
+            aria-label="Campanha anterior">
+            &#8592;
+          </button>
+          <div class="glass-dots"></div>
+          <button
+            type="button"
+            class="glass-next"
+            aria-label="Próxima campanha">
+            &#8594;
+          </button>
+        </div>
+      </section>
+      <section class="estatisticas-section">
+         <div class="estatisticas-container">
+
+        <div class="estatisticas-heading">
+          <span>RESULTADOS</span>
+          <h2>Números que conectam.</h2>
+          <p>Uma presença construída digitalmente</p>
+        </div>
+        <div class="estatisticas-grid">
+           <article class="estatisticas-card card-animado">
+            <p class="grafico-text">Instagram - Visualizações</p>
+            <h3>
+              <span class="numero-animado" data-target="7803">0</span>
+            </h3>
+            <span class="grafico-text">Últimos 30 dias</span>
+              <div class="grafico-visualizacoes">
+    <span style="--altura: 35%"></span>
+    <span style="--altura: 55%"></span>
+    <span style="--altura: 40%"></span>
+    <span style="--altura: 75%"></span>
+    <span style="--altura: 60%"></span>
+    <span style="--altura: 90%"></span>
+    <span style="--altura: 70%"></span>
+  </div>
+          </article>
+          
+<article class="estatisticas-card card-animado">
+  <p class="grafico-text">TikTok - Seguidores</p>
+  <h3 class="grafico-text">16,8 mil</h3>
+
+  <div class="grafico-barras">
+    <span style="--altura: 35%"></span>
+    <span style="--altura: 50%"></span>
+    <span style="--altura: 40%"></span>
+    <span style="--altura: 75%"></span>
+    <span style="--altura: 80%"></span>
+    <span style="--altura: 60%"></span>
+    <span style="--altura: 100%"></span>
+  </div>
+</article>
+
+           <article class="estatisticas-card card-animado">
+        <p class="grafico-text">TikTok · Visualizações</p>
+        <h3><span class="numero-animado" data-target="6900">0</span></h3>
+        <span class="grafico-text" >8 a 14 de outubro</span>
+      </article>
+        </div>
+        </div>
+      </section>
+
+      <section class="section-contato" id="contato">
+       
+<div class="container-contato">
+
+  <div class="contato-decoracao">✳</div>
+
+  <div class="contato-text">
+    <span class="contato-subtitulo">CONTATO · 01</span>
+
+    <h1>
+      Vamos criar algo<br>
+      <span>extraordinário juntos?</span>
+    </h1>
+
+    <p>
+      Ideias, projetos e novas histórias começam com uma conversa.
+      Estou pronta para conhecer sua marca e transformar ideias
+      em conteúdos autênticos.
+    </p>
+
+    <a href="mailto:email@exemplo.com" class="contato-botao">
+      Vamos conversar
+      <span>↗</span>
+    </a>
+  </div>
+
+  <div class="contato-redes">
+    <a href="LINK_INSTAGRAM" target="_blank">Instagram ↗</a>
+    <a href="LINK_TIKTOK" target="_blank">TikTok ↗</a>
+  </div>
+
+  <footer class="contato-footer">
+    © 2026 Tatiane Silva. Todos os direitos reservados.
+  </footer>
+
+</div>
+
       </section>
     </main>
-    <footer>
-      <div class="container-footer">
-        <p><a href=""></a></p>
-      </div>
-    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
   </body>
 </html>
