@@ -1,18 +1,52 @@
 const temaToggle = document.querySelector('.theme-toggle');
 const themeIcon = document.querySelector('.theme-icon');
-const body = document.querySelector('body');
+const body = document.body;
+
+// Recupera o tema escolhido anteriormente
+const temaSalvo = localStorage.getItem('tema');
+
+// Aplica o tema salvo
+if (temaSalvo === 'dark') {
+  body.classList.add('dark-mode');
+}
+
+// Atualiza o ícone de acordo com o tema atual
+function atualizarIconeTema() {
+  const heroImage = document.querySelector('.hero-img');
+  if (body.classList.contains('dark-mode')) {
+    themeIcon.src = 'imgs/tema-claro-escuro.png';
+    themeIcon.alt = 'Ativar modo claro';
+    themeIcon.style.filter = 'invert(1)';
+    heroImage.src = 'imgs/foto-hero-darkmode.png'
+    heroImage.style.height = '140vh';
+    heroImage.style.top = '60%';
+
+  } else {
+    themeIcon.src = 'imgs/tema-claro-escuro.png';
+    themeIcon.alt = 'Ativar modo escuro';
+    themeIcon.style.filter = 'invert(0)';
+    heroImage.src = 'imgs/foto-hero.png';
+    heroImage.style.top = '67%';
+
+  }
+}
+
+atualizarIconeTema();
 
 temaToggle.addEventListener('click', () => {
   body.classList.toggle('dark-mode');
+
+  const temaAtual = body.classList.contains('dark-mode')
+    ? 'dark'
+    : 'light';
+
+  localStorage.setItem('tema', temaAtual);
+
+  atualizarIconeTema();
 });
 
-if (body.classList.contains('dark-mode')) {
-  themeIcon.src = 'imgs/tema-claro.png';
-} else {
-  themeIcon.src = 'imgs/tema-claro-escuro.png';
-}
 
-/* ===== CARROSSEL DE PARCERIAS DA TATIANE ===== */
+/* ===== CARROSSEL ===== */
 
 (() => {
   const section = document.querySelector('.glass-section');

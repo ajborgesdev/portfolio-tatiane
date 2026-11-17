@@ -12,9 +12,207 @@
   --bege: #faf7f5;
 }
 
+body.dark-mode {
+  --ouro-rose: #e39aa8;
+  --dourado: #e8cb6b;
+  --dourado-escuro: #d9c65e;
+  --preto-grafite: #f1eaf0;
+
+  background-color: #171519;
+  color: #f1eaf0;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--bege);
+}
+
+body.dark-mode .hero-nav {
+  background-color: #1d1a20;
+  border-bottom-color: #665044;
+}
+
+body.dark-mode .nav-bar > ul > li > a {
+  color: #f1eaf0;
+}
+
+body.dark-mode .nav-bar > ul > li > a:hover {
+  color: var(--dourado);
+}
+
+body.dark-mode .logo-star img {
+  filter: brightness(0) invert(1);
+}
+
+body.dark-mode .hero {
+  background:
+    radial-gradient(
+      ellipse at 15% 25%,
+      #42303c 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 80% 25%,
+      #4b293b 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse at 65% 85%,
+      #70404f 0%,
+      transparent 48%
+    ),
+    linear-gradient(
+      120deg,
+      #211c24 0%,
+      #392632 50%,
+      #4b2d3a 100%
+    );
+}
+
+body.dark-mode .hero::after {
+  background: radial-gradient(
+    ellipse at 45% 48%,
+    rgba(190, 100, 130, 0.25) 0%,
+    rgba(130, 70, 100, 0.15) 42%,
+    transparent 75%
+  );
+}
+
+/* ===== SEÇÃO SOBRE ===== */
+
+body.dark-mode .section-sobre {
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(190, 100, 130, 0.15) 0%,
+      transparent 70%
+    ),
+    #171519;
+}
+
+body.dark-mode .sobre-p {
+  color: #f1eaf0;
+}
+
+body.dark-mode .sobre-lista h3 {
+  color: #f1eaf0;
+}
+
+/* ===== SEÇÃO PORTFÓLIO ===== */
+
+body.dark-mode .glass-section {
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(190, 100, 130, 0.16),
+      transparent 70%
+    ),
+    #171519;
+}
+
+body.dark-mode .glass-heading h2 {
+  color: #f1eaf0;
+}
+
+body.dark-mode .glass-heading p {
+  color: #b9afb8;
+}
+
+body.dark-mode .glass-controls {
+  background: rgba(42, 35, 44, 0.85);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+body.dark-mode .glass-prev,
+body.dark-mode .glass-next {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #e39aa8;
+}
+
+body.dark-mode .glass-dot {
+  background: #66505d;
+}
+
+body.dark-mode .glass-dot.is-active {
+  background: #e39aa8;
+  border-color: #e8cb6b;
+}
+
+/* ===== ESTATÍSTICAS ===== */
+
+body.dark-mode .estatisticas-section {
+  background-color: #171519;
+}
+
+body.dark-mode .estatisticas-heading h2 {
+  color: #f1eaf0;
+}
+
+body.dark-mode .estatisticas-heading p {
+  color: #b9afb8;
+}
+
+body.dark-mode .estatisticas-card {
+  background-color: #302631;
+  border: 1px solid rgba(232, 203, 107, 0.2);
+}
+
+body.dark-mode .grafico-text {
+  color: #e8dfe7;
+}
+
+body.dark-mode .numero-animado {
+  color: #f1eaf0;
+}
+
+body.dark-mode .grafico-barras span {
+  background: #b76e79;
+}
+
+body.dark-mode .grafico-visualizacoes span {
+  background: #b76e79;
+}
+
+/* ===== CONTATO ===== */
+
+body.dark-mode .section-contato {
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(190, 100, 130, 0.17),
+      transparent 48%
+    ),
+    #171519;
+}
+
+body.dark-mode .contato-text {
+  color: #f1eaf0;
+}
+
+body.dark-mode .contato-text h1 {
+  color: #f1eaf0;
+}
+
+body.dark-mode .contato-text p {
+  color: #c5bac4;
+}
+
+body.dark-mode .contato-botao {
+  color: #f1eaf0;
+  border-color: #e39aa8;
+}
+
+body.dark-mode .contato-botao:hover {
+  background: #b76e79;
+  color: white;
+}
+
+body.dark-mode .contato-redes a {
+  color: #f1eaf0;
+}
+
+body.dark-mode .direitos {
+  color: #938993;
 }
 
 @font-face {
@@ -38,6 +236,11 @@ body {
 @font-face {
   font-family: 'Sarabun';
   src: url('fonts/Sarabun-Light.ttf') format('truetype');
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
 }
 
 .hero-nav {
@@ -608,6 +811,7 @@ body {
 .section-contato {
   position: relative;
   overflow: hidden;
+  z-index: 0;
   background:
     radial-gradient(
       circle at 50% 45%,
@@ -717,13 +921,45 @@ body {
   color: var(--ouro-rose);
 }
 
-.contato-footer {
+.direitos {
   margin-top: 35px;
   color: #888;
   font-size: 11px;
   text-align: center;
 }
 
+.direitos::after {
+  content: '';
+  display: block;
+  width: 80%;
+  height: 1px;
+  margin: 25px auto 0;
+  background: var(--dourado);
+}
+
+.logo-kosmos {
+  width: 15px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.link-kosmos {
+  display: flex;
+  gap: 5px;
+  margin-top: 68px;
+  margin-bottom: 10px; 
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+
+.link-kosmos a {
+  text-decoration: none;
+  color: #be27be;
+}
+
+.link-kosmos a:hover {
+  color: #6d026d;
+}
 
 @media (max-width: 600px) {
   .glass-section {
